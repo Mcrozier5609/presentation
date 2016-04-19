@@ -14,8 +14,8 @@
 
 * The following slides provide a brief history of how a solution is formed
 	* Initial attempt at a solution: PEP 227 - Statically Nested Scopes
-	* Second attempt: PEP 3104 - Access to Names in Outer Scopes
-	* Latest attempt: PEP 3155 - Qualifed Name for Classes and Functions
+	* Revised attempt: PEP 3104 - Access to Names in Outer Scopes
+	* Latest revision: PEP 3155 - Qualifed Name for Classes and Functions
 
 # PEP 227 - Statically Nested Scopes
 * The addition of nested scopes allows resolution of unbound local names in enclosing function's namespaces
