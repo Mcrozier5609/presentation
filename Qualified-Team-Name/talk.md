@@ -12,10 +12,10 @@
 
 # Python's Scoping Issues-continued
 
-* The following slides provide a brief history of how a solution is formed
+* The following slides provide a brief history of how a solution evolves
 	* Initial attempt at a solution: PEP 227 - Statically Nested Scopes
 	* Revised attempt: PEP 3104 - Access to Names in Outer Scopes
-	* Latest revision: PEP 3155 - Qualifed Name for Classes and Functions
+	* Another revised attempt: PEP 3155 - Qualifed Name for Classes and Functions
 
 # PEP 227 - Statically Nested Scopes
 * The addition of nested scopes allows resolution of unbound local names in enclosing function's namespaces
@@ -97,14 +97,14 @@ def scoreboard(nonlocal score = 0):
 This time around score is declared as nonlocal, and can be changed within increment
 
 # PEP 3155 - Qualified Name for Classes and Functions
-* Given a class it was impossible to tell if it was defined within another class or at the top-level
-* In the former case, it was also impossible to tell which class it was specifically defined in
+* Given a class or function it was impossible to tell if it was defined within another class or function or at the top-level
+* In the former case, it was also impossible to tell which classor function  it was specifically defined in
 
 # PEP 3155 - Qualifed Name for Classes and Functions - Proposal
 * Add the attribute __qualname__ to functions and classes
 * At top-level __qualname__ is the same as __name__
-* For nested functins and clases __qualname__ contains a dotted path leading to the object from the top-level
-* A function's local namespace is represented in the dotted path by a component called <locals>
+* For nested functions and classes __qualname__ contains a dotted path leading to the object from the top-level
+* A function's local namespace is represented in the dotted path by a component called ```<locals>```
 
 # PEP 3155 Pre-Solution
 In Python 2 you could use `im_class` to see where things were defined
@@ -134,7 +134,7 @@ AttributeError: 'function' object has no attribute 'im_class'
 ```
 
 # Limitations of Qualified Name
-* The output of qualname function is not programmativally walkable
+* The output of qualname function is not programmatically walkable
 * This means that the usefulness of qualname will be limited to giving the programmer more information, becuase it can not be used in any program logic
 
 # Wrap Up
