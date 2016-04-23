@@ -119,9 +119,9 @@ AttributeError: 'function' object has no attribute 'im_class'
 # PEP 3155 - Post-Solution Code Example
 ```python
 >>> class foo:
-	def bar(): pass
-	class A:
-		def b(): pass
+		def bar(): pass
+		class A:
+			def b(): pass
 
 >>> foo.__qualname__
 'foo'
@@ -140,7 +140,7 @@ AttributeError: 'function' object has no attribute 'im_class'
 # Wrap Up
 * PEP 227: Added statically nested scoping, which allowed fro the variables bound in the scope that surrounds the current scope to be referenced
 * Pep 3104: Added scope override declaration in the referring inner scope
-* Pep 3155: Added qualname attribute to give the programmer a way to see the path to a variable by showing the list of the namesapces before where the classes or function is defined
+* Pep 3155: Added qualname attribute to give the programmer a way to see the path to a variable by showing the list of the namespaces before where the classes or function is defined
 
 # Citations
 * PEP 3104: http://www.python.org/dev/peps/pep-3104/
